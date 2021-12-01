@@ -4,10 +4,23 @@
  */
 package modelo;
 
+import java.util.ArrayList;
+
 /**
  *
- * @author migue
+ * @author Julián Andrés Florez Cendales, Miguel Ángel Restrepo Henao
  */
 public class Estudiante {
+    private String celula ;
+    private String nombre ;
+    public ArrayList<String> materiasInscritas;
+    
+    public int getCantidadMaterias(){
+        return this.materiasInscritas.size();
+    }
+    
+    public void agregarMAteria(String codMAteria, String nombreMateria){
+        
+    }
     
 }
