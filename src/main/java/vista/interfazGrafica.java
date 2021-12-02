@@ -90,7 +90,7 @@ public class interfazGrafica extends javax.swing.JFrame {
         //prueba C:\Users\migue\OneDrive\Documents\prueba.txt
         ArchivoPlano archivo= new ArchivoPlano(CampoRuta.getText());
         archivo.cargarPlano();
-        //JOptionPane.showMessageDialog(null, "Se registr");
+        JOptionPane.showMessageDialog(null, archivo.imprimirMensaje());
     }//GEN-LAST:event_jButton1ActionPerformed
     private void imprimirMensaje(){
         

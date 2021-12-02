@@ -18,17 +18,22 @@ public class Estudiante {
     public Estudiante(String celula, String nombre) {
         this.celula = celula;
         this.nombre = nombre;
+         this.materiasInscritas= new ArrayList<String>();
     }
     
     public String getCedula(){
         return this.celula;
     }
+    public String getNombre(){
+        return this.nombre;
+    }
+    
     public int getCantidadMaterias(){
         return this.materiasInscritas.size();
     }
     
-    public void agregarMAteria(String codMAteria, String nombreMateria){
-        this.materiasInscritas.add(codMAteria+" "+ nombreMateria);
+    public void agregarMateria(String codMateria, String nombreMateria){
+        this.materiasInscritas.add(codMateria+" "+ nombreMateria);
     }
     
 }

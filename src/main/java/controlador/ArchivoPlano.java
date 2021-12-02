@@ -24,6 +24,7 @@ public class ArchivoPlano {
      * @param ruta 
      */
     public ArchivoPlano(String ruta) {
+        this.datos= new ArrayList<String>();
         this.ruta=ruta;
         this.inscripcion= new Inscripciones();
     }
@@ -40,13 +41,13 @@ public class ArchivoPlano {
             Texto=br.readLine();
             while ((line = br.readLine()) != null) {
                 datos.add(line);
+                System.out.println(line);
                 String[] temp= line.split(",");
                 agregarInscripcion(temp[0], temp[1], temp[3], temp[2]);
             }
         }
         catch (IOException e) {
-            System.out.println("ha ocurrido un error.");
-            JOptionPane.showMessageDialog(null, "Archivo"+ruta+" no encontrado");
+            System.out.println("ha ocurrido un error."+"Archivo"+ruta+" no encontrado");
             e.printStackTrace();
         }
     }
@@ -60,7 +61,7 @@ public class ArchivoPlano {
         convertirPlano(this.ruta);
     }
     
-    public void imprimirMensaje( String mensaje){
-        
+    public String imprimirMensaje(){
+        return inscripcion.listarEstudiantesMaterias();
     }
 }
