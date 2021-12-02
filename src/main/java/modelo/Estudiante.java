@@ -14,13 +14,21 @@ public class Estudiante {
     private String celula ;
     private String nombre ;
     public ArrayList<String> materiasInscritas;
+
+    public Estudiante(String celula, String nombre) {
+        this.celula = celula;
+        this.nombre = nombre;
+    }
     
+    public String getCedula(){
+        return this.celula;
+    }
     public int getCantidadMaterias(){
         return this.materiasInscritas.size();
     }
     
     public void agregarMAteria(String codMAteria, String nombreMateria){
-        
+        this.materiasInscritas.add(codMAteria+" "+ nombreMateria);
     }
     
 }

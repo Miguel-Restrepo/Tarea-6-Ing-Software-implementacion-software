@@ -12,13 +12,32 @@ import java.util.ArrayList;
  */
 public class Inscripciones {
     private ArrayList<Estudiante> estudiantes;
+
+    public Inscripciones() {
+    }
     
-    public void agregarInscripcion(String cedula, String materia, String codMAteria){
+    
+    public void agregarInscripcion(String cedula,String nombre, String materia,String codMAteria){
+        if(!estudianteExiste(cedula))
+        {
+            agregarEstudiante(cedula, nombre);
+        }
         
+        estudiantes.forEach((e) -> {
+            if (e.getCedula().equals(cedula)){
+                e.agregarMAteria(codMAteria, materia);
+            }
+        });
     }
     
     public boolean estudianteExiste(String cedula){
-    return true;    
+        boolean retorno=false;
+        estudiantes.forEach((e) -> {
+            if (e.getCedula().equals(cedula)){
+                retorno= true;
+            }
+        });
+        return retorno;    
     }
     
     public String[] listarEstudiantesMaterias(){
@@ -28,6 +47,6 @@ public class Inscripciones {
     
     public void agregarEstudiante(String cedula, String nombre)
     {
-        
+        estudiantes.add(new Estudiante(cedula, nombre));
     }
 }
