@@ -87,11 +87,14 @@ public class interfazGrafica extends javax.swing.JFrame {
  */
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        //prueba C:\Users\migue\OneDrive\Documents\numeros.txt
-        //Calculos calculos= new Calculos(new Archivo(CampoRuta.getText()));
-        //JOptionPane.showMessageDialog(null, calculos);
+        //prueba C:\Users\migue\OneDrive\Documents\prueba.txt
+        ArchivoPlano archivo= new ArchivoPlano(CampoRuta.getText());
+        archivo.cargarPlano();
+        //JOptionPane.showMessageDialog(null, "Se registr");
     }//GEN-LAST:event_jButton1ActionPerformed
-
+    private void imprimirMensaje(){
+        
+    }
     /**
      * @param args the command line arguments
      */
