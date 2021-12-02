@@ -11,13 +11,16 @@ import java.util.ArrayList;
  * @author Julián Andrés Florez Cendales, Miguel Ángel Restrepo Henao
  */
 public class Inscripciones {
-    private ArrayList<Estudiante> estudiantes;
+    ArrayList<Estudiante> estudiantes;
 
     public Inscripciones() {
         this.estudiantes= new ArrayList<Estudiante>();
     }
     
-    
+    /**
+     * Verifica si el estudiante existe, 
+     * y despues agrega la materia la estudiante que corresponde
+     */
     public void agregarInscripcion(String cedula,String nombre, String materia,String codMateria){
         if(!estudianteExiste(cedula))
         {
@@ -42,6 +45,11 @@ public class Inscripciones {
         return retorno;    
     }
     
+
+    /**
+    * Recorre la lista de estudiantes y guarda el nombre y 
+    * la cantidad de materias en un string
+    */
     public String listarEstudiantesMaterias(){
          String retorno= "Estudiantes- cantidad materias matriculadas";
          for(int i=0; i<estudiantes.size(); i++)

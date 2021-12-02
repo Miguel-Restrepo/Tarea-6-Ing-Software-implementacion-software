@@ -29,7 +29,8 @@ public class ArchivoPlano {
         this.inscripcion= new Inscripciones();
     }
     /**
-     * lee el archivo haciendo uso de la libreria BufferedReader apartir de la ruta, me retorna el todo en un String
+     * lee el archivo haciendo uso de la libreria BufferedReader apartir de la ruta
+     * y por cada linea genera una inscripción
      * @param ruta
      * @return 
      */
